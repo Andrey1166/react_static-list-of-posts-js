@@ -14,7 +14,11 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user ? (
+            <UserInfo user={user} />
+          ) : (
+            <span className="UserInfo">Unknown author</span>
+          )}
         </p>
       </div>
 
